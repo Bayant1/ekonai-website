@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ekon AI - The AI with Conscience. Discover spiritually-aligned AI solutions powered by timeless ethics, truth, and fearlessness.">
+    <meta name="keywords" content="Ekon AI, AI with Conscience, MMAT, ethical AI, spiritual AI, AI governance, AI ethics, open-source AI">
+    <meta name="author" content="Bayant Dhindsa">
+    <meta name="robots" content="index, follow">
+    <title>Ekon AI - The AI with Conscience</title>
+
+    <meta property="og:title" content="Ekon AI - The AI with Conscience">
+    <meta property="og:description" content="Discover spiritually-aligned AI solutions powered by timeless ethics, truth, and fearlessness.">
+    <meta property="og:image" content="images/text.png">
+    <meta property="og:url" content="https://ekonai.com">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+  <div class="ai-bg fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
+    <!-- Gradient background -->
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#001a2e] via-[#002f4f] to-[#0f0f1f] opacity-90"></div>
+  
+    <!-- Existing SVG glow and lines -->
+    <svg width="100%" height="100%" viewBox="0 0 1440 1024" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" class="absolute top-0 left-0 w-full h-full">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+          <stop offset="0%" style="stop-color: #00f0ff; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #001a2e; stop-opacity: 0" />
+        </radialGradient>
+      </defs>
+  
+      <!-- Glow Background -->
+      <rect width="100%" height="100%" fill="url(#glow)" />
+  
+      <!-- Lines -->
+      <g stroke="#0ff" stroke-width="1" opacity="0.4">
+        <line x1="100" y1="200" x2="400" y2="300" />
+        <line x1="300" y1="400" x2="700" y2="500" />
+        <line x1="800" y1="200" x2="1000" y2="400" />
+        <line x1="1200" y1="600" x2="900" y2="800" />
+      </g>
+  
+      <!-- Circles (Nodes) -->
+      <g fill="#0ff">
+        <circle cx="100" cy="200" r="2" />
+        <circle cx="400" cy="300" r="3" />
+        <circle cx="300" cy="400" r="2" />
+        <circle cx="700" cy="500" r="3" />
+        <circle cx="800" cy="200" r="3" />
+        <circle cx="1000" cy="400" r="2" />
+        <circle cx="1200" cy="600" r="2" />
+        <circle cx="900" cy="800" r="3" />
+      </g>
+    </svg>
+  </div>
+  
+      
+    
+
+      <header class="w-full px-6 py-4 flex justify-between items-center bg-black bg-opacity-30 text-cyan-300 font-semibold z-20 relative"
+      data-aos="fade-down"
+      data-aos-duration="1000">
+        <!-- Logo and Title -->
+        <div class="flex items-center">
+          <img src="images/logo.png" alt="Logo" class="w-16 h-16">
+          <h1 class="text-xl font-bold tracking-widest">
+            <span class="text-white">EKON</span><span class="text-cyan-400">AI</span>
+          </h1>
+        </div>
+      
+        <!-- Desktop Nav Links -->
+        <nav class="hidden md:flex space-x-6 text-sm items-center"
+        data-aos="fade-left"
+  data-aos-duration="1200">
+            <a href="#features" class="transition duration-200 transform bg-transparent rounded-lg hover:bg-green-500 hover:scale-105 px-2 py-1">Features</a>
+            <a target="_blank" href="https://github.com/Bayant1/ekonAI-MMAT"  class="transition duration-200 transform bg-transparent rounded-lg hover:bg-green-500 hover:scale-105 px-2 py-1">Github</a>
+            <a target="_blank" href="//bayant1.github.io/mmat-alignment-test/" class="transition duration-200 transform bg-transparent rounded-lg hover:bg-green-500 hover:scale-105 px-2 py-1">MMAT Demo</a>
+            <a href="#about" class="transition duration-200 transform bg-transparent rounded-lg hover:bg-green-500 hover:scale-105 px-2 py-1">About</a>
+            <a href="#footer" class="transition duration-200 transform bg-transparent rounded-lg hover:bg-green-500 hover:scale-105 px-2 py-1">Contact</a>
+          </nav>
+          
+      
+        <!-- Mobile Menu Icon -->
+        <button id="menu-toggle" class="md:hidden text-cyan-300 text-2xl focus:outline-none" data-aos="fade-left"
+        data-aos-duration="1200">
+            <i id="menu-icon" class="fas fa-bars transition duration-200"></i>
+          </button>
+      
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="absolute top-full right-6 mt-2 w-48 bg-black bg-opacity-70 rounded-lg shadow-lg text-sm text-cyan-300 hidden md:hidden p-4 space-y-2"
+        >
+            <a href="#features" class="block transition duration-200 transform hover:bg-green-500 rounded-lg hover:scale-105 px-2 py-1">Features</a>
+            <a target="_blank" href="https://github.com/Bayant1/ekonAI-MMAT" class="block transition duration-200 transform hover:bg-green-500 rounded-lg hover:scale-105 px-2 py-1">Github</a>
+            <a target="_blank" href="//bayant1.github.io/mmat-alignment-test/" class="block transition duration-200 transform hover:bg-green-500 rounded-lg hover:scale-105 px-2 py-1">MMAT Demo</a>
+            <a href="#about" class="block transition duration-200 transform hover:bg-green-500 rounded-lg hover:scale-105 px-2 py-1">About</a>
+            <a href="#footer" class="block transition duration-200 transform hover:bg-green-500 rounded-lg hover:scale-105 px-2 py-1">Contact</a>
+        </div>
+      </header>
+      
+
+
+      <section class="flex pb-40 flex-col lg:flex-row items-center justify-center min-h-screen text-center lg:text-center px-6 py-12 relative z-10">
+        <!-- Left Content (Text) -->
+        <div class="lg:w-1/2 space-y-6 lg:items-center lg:text-center" data-aos="fade-up" data-aos-duration="1200">
+          <!-- Robot Icon -->
+          <div class="mb-6" data-aos="zoom-in" data-aos-duration="1000">
+            <i class="fas fa-robot text-6xl text-cyan-400 neon-glow"></i>
+          </div>
+      
+          <!-- Main Neon Title -->
+          <h1 class="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-cyan-400 neon-glow font-['Playfair_Display']">
+            EKON AI
+          </h1>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-cyan-400 neon-glow font-['Playfair_Display']">
+            THE AI WITH CONSCIENCE
+          </h1>
+      
+          <!-- Slogan -->
+          <p class="mt-6 px-4 lg:px-0 max-w-2xl mx-auto text-gray-400 text-lg sm:text-xl z-10">
+            Ekon AI powers spiritually-aligned AI — truth, fearlessness, and timeless ethics in action.
+          </p>
+      
+          <!-- Button -->
+          <a href="https://bayant.substack.com/p/the-founders-statement-why-i-built" 
+             target="_blank" 
+             class="mt-8 inline-block bg-green-500 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold px-6 py-3 rounded-full transition transform hover:scale-105 shadow-lg z-10">
+            Read the Manifesto on Substack
+          </a>
+        </div>
+      
+        <!-- Right Content (Video) -->
+        <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+          <video class="w-full rounded-lg shadow-lg" autoplay muted loop playsinline>
+            <source src="images/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+
+
+     <!-- About Section -->
+     <section id="about" class="flex flex-col items-center justify-center min-h-screen text-center px-6 py-16 relative z-10 bg-opacity-90">
+      <!-- Title -->
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-cyan-400 mb-8" data-aos="fade-up" data-aos-duration="1000">
+        What is MMAT?
+      </h2>
+    
+      <!-- Table -->
+      <div class="overflow-x-auto w-full" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+        <table class="table-auto border-collapse border border-gray-500 mx-auto text-left text-gray-300 text-sm sm:text-base">
+          <thead>
+            <tr class="bg-gray-800 text-white">
+              <th class="border border-gray-300 px-4 py-2">UNESCO Priority</th>
+              <th class="border border-gray-300 px-4 py-2">UNESCO Language</th>
+              <th class="border border-gray-300 px-4 py-2">MMAT Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-500 px-4 py-2">Human Rights & Dignity</td>
+              <td class="border border-gray-500 px-4 py-2">Ensure respect for human dignity, freedom, and cultural diversity.</td>
+              <td class="border border-gray-500 px-4 py-2">MMAT centers Nirvair (non-hostility) and Ik Onkar (unity) as constraints against dehumanizing outputs.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-500 px-4 py-2">Transparency & Explainability</td>
+              <td class="border border-gray-500 px-4 py-2">Promote transparency and explainability of AI systems.</td>
+              <td class="border border-gray-500 px-4 py-2">MMAT uses JSON-LD ethical metadata + public scoring rubrics (e.g., Sat Naam rubric) across all models.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-500 px-4 py-2">Accountability</td>
+              <td class="border border-gray-500 px-4 py-2">Establish accountability mechanisms across the AI lifecycle.</td>
+              <td class="border border-gray-500 px-4 py-2">MMAT is cross-model scoring, discrepancy flags, and alignment audits per principle.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-500 px-4 py-2">Ethical & Inclusive Design</td>
+              <td class="border border-gray-500 px-4 py-2">Ensure ethical impact assessments and inclusive design methods.</td>
+              <td class="border border-gray-500 px-4 py-2">MMAT is co-designed with spiritual frameworks and tested across multicultural, multilingual dilemmas.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+      <!-- First Paragraph -->
+      <div class="mt-8 px-4 max-w-3xl bg-black bg-opacity-30 p-4 rounded-lg" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+        <p class="text-gray-300 text-lg sm:text-xl">
+          The Mool Mantar Alignment Test (MMAT) is a benchmark for AI outputs, grounded in Sikh spiritual values like Nirbhau (Fearlessness) and Sat Naam (Truth). Instead of just avoiding harm, MMAT scores whether an AI upholds ethical clarity, timelessness, and inner integrity. The protocol is open-source, tested across four AI systems, and freely available on GitHub.
+        </p>
+      </div>
+    
+      <!-- Buttons -->
+      <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+        <a
+          href="https://github.com/Bayant1/ekonAI-MMAT" 
+          target="_blank" 
+          class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition transform hover:scale-105 shadow-lg"
+        >
+          View MMAT on GitHub
+        </a>
+      </div>
+    
+      <!-- Second Paragraph -->
+      <div class="mt-12 px-4 max-w-3xl bg-black bg-opacity-30 p-4 rounded-lg" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+        <p class="text-gray-300 text-lg sm:text-xl">
+          EkonAI was born from a deeply personal mission: to embed spiritual conscience in artificial intelligence. Read the full story behind its creation.
+        </p>
+      </div>
+    
+      <!-- Button -->
+      <a
+        href="https://bayant.substack.com/p/the-founders-statement-why-i-built" 
+        target="_blank" 
+        class="mt-6 inline-block bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-full transition transform hover:scale-105 shadow-lg"
+        data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1000"
+      >
+        Read the Founder's Statement
+      </a>
+    
+      <!-- Final Paragraph -->
+      <div class="mt-12 px-4 max-w-3xl bg-black bg-opacity-30 p-4 rounded-lg" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1200">
+        <p class="text-gray-300 text-lg sm:text-xl">
+          No censorship — just conscience.
+        </p>
+      </div>
+    </section>
+
+
+<!-- Launch MMAT Section -->
+<section id="launch-mmat" class="flex flex-col items-center justify-center min-h-screen text-center lg:text-left px-6 py-16 bg-gradient-to-br from-[#001a2e] via-[#002f4f] to-[#0f0f1f] text-gray-300 relative z-10">
+  <!-- Title -->
+  <h2 class="text-4xl sm:text-5xl font-extrabold text-cyan-400 mb-8" data-aos="fade-up" data-aos-duration="1000">
+    Launch MMAT via EkonOS
+  </h2>
+
+  <!-- Content Wrapper -->
+  <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between w-full max-w-6xl space-y-8 lg:space-y-0 lg:space-x-8">
+    <!-- Left Content (Text) -->
+    <div class="lg:w-1/2 space-y-6 px-4 max-w-3xl bg-black bg-opacity-30 p-6 rounded-lg space-y-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+      <!-- First Paragraph -->
+      <p class="text-gray-300 text-lg sm:text-xl">
+        Score and align AI outputs at scale with our API suite.
+      </p>
+
+      <!-- Unordered List -->
+      <ul class="text-left text-lg sm:text-xl space-y-4">
+        <li class="flex items-start">
+          <span class="text-cyan-400 mr-2">•</span>
+          The first AI conscience protocol validated across multiple systems — now entering live testing.
+        </li>
+        <li class="flex items-start">
+          <span class="text-cyan-400 mr-2">•</span>
+          Submitted to the EU AI Act and UNESCO AI Ethics Initiative.
+        </li>
+      </ul>
+
+      <!-- Second Paragraph -->
+      <p class="text-gray-300 text-lg sm:text-xl">
+        EkonOS helps institutions embed spiritual values into AI governance — Unlocking Trust, Alignment, and Compliance.
+      </p>
+    </div>
+
+    <!-- Right Content (Image) -->
+    <div class="lg:w-1/2" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+      <img src="images/chart.png" alt="Chart" class="w-full rounded-lg shadow-lg">
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="mt-8 flex flex-col sm:flex-row lg:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1000">
+    <a
+      href="https://bayant1.github.io/mmat-alignment-test/" 
+      class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition transform hover:scale-105 shadow-lg"
+    >
+      Test MMAT
+      <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+    <a
+      href="#join-mission" 
+      class="inline-flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition transform hover:scale-105 shadow-lg"
+    >
+      Join the Mission
+      <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+    <a
+      href="https://github.com/Bayant1/ekonAI-MMAT" 
+      class="inline-flex items-center justify-center bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-full transition transform hover:scale-105 shadow-lg"
+    >
+      Explore Code
+      <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+  </div>
+</section>
+
+
+<!-- Features Section -->
+<section id="features" class="flex flex-col items-center justify-center min-h-screen text-center px-6 py-16 bg-gradient-to-br from-[#001a2e] via-[#002f4f] to-[#0f0f1f] text-gray-300 relative z-10">
+  <!-- Title -->
+  <h2 class="text-4xl sm:text-5xl font-extrabold text-cyan-400 mb-8" data-aos="fade-up" data-aos-duration="1000">
+    Features of Ekon AI
+  </h2>
+
+  <!-- Features Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Feature 1 -->
+    <div class="bg-black bg-opacity-40 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+      <i class="fas fa-brain text-4xl text-cyan-400 mb-4"></i>
+      <h3 class="text-xl font-bold text-white mb-2">AI with Conscience</h3>
+      <p class="text-gray-400">
+        Ekon AI powers spiritually-aligned AI, embedding timeless ethics like truth and fearlessness into its outputs.
+      </p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="bg-black bg-opacity-40 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
+      <i class="fas fa-balance-scale text-4xl text-cyan-400 mb-4"></i>
+      <h3 class="text-xl font-bold text-white mb-2">Ethical Alignment</h3>
+      <p class="text-gray-400">
+        The Mool Mantar Alignment Test (MMAT) ensures AI systems uphold ethical clarity, timelessness, and inner integrity.
+      </p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="bg-black bg-opacity-40 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">
+      <i class="fas fa-code text-4xl text-cyan-400 mb-4"></i>
+      <h3 class="text-xl font-bold text-white mb-2">Open Source</h3>
+      <p class="text-gray-400">
+        MMAT is open-source and freely available on GitHub, enabling transparency and collaboration in AI governance.
+      </p>
+    </div>
+
+    <!-- Feature 4 -->
+    <div class="bg-black bg-opacity-40 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="800">
+      <i class="fas fa-users text-4xl text-cyan-400 mb-4"></i>
+      <h3 class="text-xl font-bold text-white mb-2">Community Driven</h3>
+      <p class="text-gray-400">
+        Ekon AI is co-designed with spiritual frameworks and tested across multicultural, multilingual dilemmas.
+      </p>
+    </div>
+
+    <!-- Feature 5 -->
+    <div class="bg-black bg-opacity-40 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="1000">
+      <i class="fas fa-shield-alt text-4xl text-cyan-400 mb-4"></i>
+      <h3 class="text-xl font-bold text-white mb-2">Trust & Compliance</h3>
+      <p class="text-gray-400">
+        EkonOS helps institutions embed spiritual values into AI governance, unlocking trust, alignment, and compliance.
+      </p>
+    </div>
+
+    <!-- Feature 6 -->
+    <div class="bg-black bg-opacity-40 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="1200">
+      <i class="fas fa-globe text-4xl text-cyan-400 mb-4"></i>
+      <h3 class="text-xl font-bold text-white mb-2">Global Standards</h3>
+      <p class="text-gray-400">
+        Submitted to the EU AI Act and UNESCO AI Ethics Initiative, Ekon AI sets a global benchmark for ethical AI.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Founder Quote Section -->
+<section id="founder-quote" class="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left px-6 py-6 bg-gradient-to-br from-[#001a2e] via-[#002f4f] to-[#0f0f1f] text-gray-300 relative z-10">
+  <!-- Video -->
+  <div class="mb-12 lg:mb-0 lg:mr-8 w-full lg:w-1/2" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+    <video class="w-full rounded-lg shadow-lg" autoplay muted loop playsinline>
+      <source src="images/quote.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Quote and Founder Name -->
+  <div class="w-full lg:w-1/2" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+    <!-- Quote -->
+    <blockquote class="text-2xl sm:text-3xl font-semibold text-cyan-400 italic max-w-3xl mx-auto lg:mx-0">
+      <i class="fas fa-quote-left text-cyan-400 mr-2"></i>
+      EkonAI doesn’t just avoid harm — it architects holiness.
+      <i class="fas fa-quote-right text-cyan-400 ml-2"></i>
+    </blockquote>
+
+    <!-- Founder Name -->
+    <p class="mt-4 text-lg sm:text-xl font-bold text-gray-400">
+      — Bayant Dhindsa
+    </p>
+  </div>
+</section>
+      
+      
+      
+
+<footer id="footer" class="bottom-0 left-0 w-full bg-black bg-opacity-40 py-8 text-white">
+  <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <!-- Contact Form Section -->
+    <div class="flex flex-col items-center lg:items-start space-y-6 w-full" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+      <h2 class="text-2xl font-bold text-center lg:text-left text-white">Contact Us</h2>
+      <form action="mailto:bayant@gmail.com" method="GET" class="space-y-6 w-full bg-black bg-opacity-40 p-6 rounded-lg shadow-xl">
+        <!-- Name Input -->
+        <div class="w-full">
+          <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-cyan-400 bg-black text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition duration-300">
+        </div>
+
+        <!-- Email Input -->
+        <div class="w-full">
+          <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg border border-cyan-400 bg-black text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition duration-300">
+        </div>
+
+        <!-- Subject Input -->
+        <div class="w-full">
+          <input type="text" name="subject" placeholder="Subject" class="w-full px-4 py-3 rounded-lg border border-cyan-400 bg-black text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition duration-300">
+        </div>
+
+        <!-- Message Textarea -->
+        <div class="w-full">
+          <textarea name="body" placeholder="Your Message" rows="5" class="w-full px-4 py-3 rounded-lg border border-cyan-400 bg-black text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition duration-300"></textarea>
+        </div>
+
+        <!-- Send Button -->
+        <div class="w-full">
+          <button type="submit" class="w-full py-3 rounded-lg bg-green-500 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 text-white font-semibold shadow-md hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Logo, Contact Info, and Social Links Section -->
+    <div class="flex flex-col items-center lg:items-center space-y-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+      <!-- Logo Section -->
+      <div class="flex justify-center lg:justify-end items-center space-x-4">
+        <img src="images/text.png" alt="Logo" class="w-64">
+      </div>
+
+      <!-- Contact Info Section -->
+      <div class="flex flex-col items-center lg:items-center space-y-4 text-center lg:text-right">
+        <p class="text-lg font-semibold">Bayant Dhindsa</p>
+        <p class="text-sm">
+          <i class="fas fa-envelope text-cyan-400 mr-2"></i>
+          <span>Email: </span>
+          <a href="mailto:bayant@gmail.com" class="hover:underline">bayant@gmail.com</a>
+        </p>
+        <p class="text-sm">
+          <i class="fas fa-phone text-cyan-400 mr-2"></i>
+          <span>Phone: </span>
+          <a href="tel:+16046136300" class="hover:underline">+1.604.613.6300</a>
+        </p>
+      </div>
+
+      <!-- Social Links Section -->
+      <div class="flex flex-col items-center lg:items-center space-y-4">
+        <h3 class="text-lg font-bold text-white">Important Links</h3>
+        <div class="flex flex-wrap justify-center lg:justify-end space-x-4">
+          <a href="https://bit.ly/ekonai-github" target="_blank" class="text-cyan-400 hover:text-cyan-500 hover:underline">
+            GitHub
+          </a>
+          <a href="https://bayant.substack.com/p/the-one-chart-that-proves-ai-needs" target="_blank" class="text-cyan-400 hover:text-cyan-500 hover:underline">
+            Substack
+          </a>
+          <a href="[Insert MMAT Policy Brief PDF URL here]" target="_blank" class="text-cyan-400 hover:text-cyan-500 hover:underline">
+            Policy Brief
+          </a>
+        </div>
+        <div class="flex justify-center lg:justify-end items-center space-x-4 mt-4">
+          <a href="https://twitter.com" target="_blank" class="text-cyan-400 hover:text-cyan-500">
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="text-cyan-400 hover:text-cyan-500">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a href="https://github.com" target="_blank" class="text-cyan-400 hover:text-cyan-500">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider Line -->
+  <div class="w-full border-t border-gray-500 my-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800"></div>
+
+  <!-- Copyright Section -->
+  <div class="text-center w-full" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1000">
+    <p>Copyright © 2025 Ekon AI. All rights reserved.</p>
+  </div>
+</footer>
+    
+    
+    
+    
+    
+    <!-- Scroll to Top Button -->
+<button id="scrollToTop" class="fixed bottom-6 right-6 bg-green-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition transform hover:scale-110 hidden">
+  <i class="fas fa-arrow-up"></i>
+</button>
+    <script src="script.js"></script>
+</body>
+</html>
