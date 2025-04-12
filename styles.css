@@ -78,6 +78,12 @@ body {
   display: none; /* Initially hidden */
   cursor: pointer;
 }
+
+blockquote {
+  border-left: 4px solid #0ff;
+  padding-left: 1rem;
+  font-style: italic;
+}
   
   
   
