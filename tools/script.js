@@ -4,9 +4,41 @@ $(document).ready(function () {
       once: true, // Whether animation should happen only once
     });
   
-    // Prompt Submission and Mock Response Rendering
     const submitButton = document.getElementById('submit-btn');
     const resultsContainer = document.getElementById('results');
+    const mmatToggle = document.getElementById('mmat-toggle');
+    const toggleTrack = document.getElementById('toggle-track');
+    const toggleDot = document.getElementById('toggle-dot');
+    const toggleLabel = document.querySelector('label[for="mmat-toggle"] span');
+  
+    // Function to update MMAT toggle UI and save state
+    function updateMMATToggleUI(isChecked) {
+      // Update the label text
+      if (isChecked) {
+        toggleLabel.textContent = '🟢 MMAT Scoring Enabled';
+        toggleTrack.style.backgroundColor = '#4caf50'; // Green when enabled
+        toggleDot.style.transform = 'translateX(1.5rem)'; // Move dot to the right
+      } else {
+        toggleLabel.textContent = '🔴 MMAT Scoring Disabled';
+        toggleTrack.style.backgroundColor = '#d1d5db'; // Gray when disabled
+        toggleDot.style.transform = 'translateX(0)'; // Reset dot to the left
+      }
+  
+      // Save the state to localStorage
+      localStorage.setItem('mmatScoringEnabled', isChecked);
+    }
+  
+    // Initialize MMAT toggle state on page load
+    const savedMMATState = localStorage.getItem('mmatScoringEnabled');
+    const isMMATEnabled = savedMMATState === null ? true : savedMMATState === 'true'; // Default to enabled
+    mmatToggle.checked = isMMATEnabled;
+    updateMMATToggleUI(isMMATEnabled);
+  
+    // Add event listener for MMAT toggle
+    mmatToggle.addEventListener('change', () => {
+      const isChecked = mmatToggle.checked;
+      updateMMATToggleUI(isChecked);
+    });
   
     submitButton.addEventListener('click', async () => {
       const prompt = document.getElementById('prompt').value;
@@ -42,13 +74,18 @@ $(document).ready(function () {
           const resultCard = document.createElement('div');
           resultCard.className = 'bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md';
   
+          // Check MMAT toggle state
+          const showMMAT = mmatToggle.checked;
+  
           resultCard.innerHTML = `
             <h2 class="text-xl font-bold mb-2">${result.model}</h2>
             <p class="mb-2"><strong>Response:</strong> ${result.response}</p>
-            <p><strong>MMAT Principle Applied:</strong> ${result.mmat_principle}</p>
-            <p><strong>MMAT Score:</strong> <span class="font-bold text-blue-500">${result.score}</span></p>
-            <p><strong>MMAT Notes:</strong> ${result.notes}</p>
-            <p><strong>MMAT Suggestions:</strong> ${result.suggestions}</p>
+            ${showMMAT ? `
+              <p><strong>MMAT Principle Applied:</strong> ${result.mmat_principle}</p>
+              <p><strong>MMAT Score:</strong> <span class="font-bold text-blue-500">${result.score}</span></p>
+              <p><strong>MMAT Notes:</strong> ${result.notes}</p>
+              <p><strong>MMAT Suggestions:</strong> ${result.suggestions}</p>
+            ` : ''}
           `;
   
           resultsContainer.appendChild(resultCard);
